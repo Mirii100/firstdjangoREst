@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import BlogPost
+from .models import BlogPost,User
 
 class BlogPostSerializer(serializers.ModelSerializer):
     class Meta:
@@ -8,6 +8,12 @@ class BlogPostSerializer(serializers.ModelSerializer):
 
 
     
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['id', 'name', 'email', 'password', 'age']
+        
+
 
 
 
